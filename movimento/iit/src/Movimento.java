@@ -17,8 +17,8 @@ public class Movimento extends PApplet {
     float l_wrist_x;
     float l_wrist_y;
 
-    float cordX=0;
-    float cordY=0;
+    float cordX=width/2;
+    float cordY=height/2;
 
     float cordX1=0;
     float cordY1=0;
@@ -96,25 +96,21 @@ public class Movimento extends PApplet {
         }
         //cordX1=cordX;
         //cordY1=cordY;
-        if(r_wrist_x>0){
-            cordX=cordX+100;
+
+        //movimento asse orizzontale con cordinata X del naso
+
+        if (nose_x>0 && nose_x<640){
+            cordX= (1920*nose_x)/840;
             clear();
-            image(personaggio, cordX, cordX, grandezza, larghezza );
-            if (l_wrist_x>0){
-                cordX=cordX-100;
-                clear();
-                image(personaggio, cordX, cordX, grandezza, larghezza );
-            }
-            if (r_wrist_y>0){
-                cordY=cordY+100;
-                clear();
-                image(personaggio, cordX, cordX, grandezza, larghezza );
-            }
-            if(r_wrist_y>0){
-                cordY=cordY-100;
-                clear();
-                image(personaggio, cordX, cordX, grandezza, larghezza );
-            }
+            image(personaggio, cordX, cordY, grandezza, larghezza );
+        }
+
+        //movimento asse orizzontale con cordinata X del naso
+
+        if(nose_y>0 && nose_y<(470-grandezza)){
+            cordY=(1080*nose_y)/470;
+            clear();
+            image(personaggio, cordX, cordY, grandezza, larghezza );
         }
     }
     public void mousePressed() {
