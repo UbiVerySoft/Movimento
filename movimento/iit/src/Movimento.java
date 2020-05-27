@@ -23,8 +23,8 @@ public class Movimento extends PApplet {
     float cordX1=0;
     float cordY1=0;
 
-    float grandezza=150;
-    float larghezza=300;
+    float grandezza=100;
+    float larghezza=200;
 
     float x, y, speedX, speedY;
     float diam = 40;
