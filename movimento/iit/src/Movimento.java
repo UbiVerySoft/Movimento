@@ -107,7 +107,7 @@ public class Movimento extends PApplet {
 
         //movimento asse orizzontale con cordinata X del naso
 
-        if(nose_y>0 && nose_y<(470-grandezza)){
+        if(nose_y>0 && nose_y<(400-grandezza)){
             cordY=(1080*nose_y)/470;
             clear();
             image(personaggio, cordX, cordY, grandezza, larghezza );
